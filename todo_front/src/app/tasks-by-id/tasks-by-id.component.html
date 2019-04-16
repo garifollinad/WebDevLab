@@ -1,0 +1,35 @@
+<app-main>
+  <ng-container>
+    <div class="container">
+      <div class="row" name="header">
+        <button type="button" class="btn btn-info btn-outline-info" style="color: aliceblue" (click)="navigateBack()">Go Back</button>
+        <span><h2>Task</h2></span>
+      </div>
+      <br>
+      <div name="body">
+        <table class="table table-bordered">
+          <tr>
+            <td>ID</td>
+            <td>{{task.id}} </td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>{{task.name}} </td>
+          </tr>
+          <tr>
+            <td>Created At</td>
+            <td>{{task.created_at | date:'yyyy-MM-dd HH:mm:ss'}} </td>
+          </tr>
+          <tr>
+            <td>Due on</td>
+            <td>{{task.due_on | date:'yyyy-MM-dd HH:mm:ss'}} </td>
+          </tr>
+          <tr>
+            <td>Status</td>
+            <td>{{task.status}} </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </ng-container>
+</app-main>

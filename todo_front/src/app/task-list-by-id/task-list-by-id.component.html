@@ -1,0 +1,22 @@
+<app-main>
+  <ng-container>
+    <div class="container">
+      <div class="row" name="header">
+        <button type="button" class="btn btn-info btn-outline-info" style="color: aliceblue"  (click)="navigateBack()">Go Back</button>
+        <span><h2>Task List Detail</h2></span>
+      </div>
+      <hr>
+      <br>
+      <div name="body">
+
+        <h2>
+          <span>The tasklist name is </span>
+          <strong>{{taskList.name}}</strong> with ID:
+          <strong> {{taskList.id}} </strong>
+        </h2>
+
+      </div>
+    </div>
+  </ng-container>
+
+</app-main>

@@ -1,0 +1,27 @@
+<ng-container>
+  <app-main>
+    <div class="row">
+      <button type="button" class="btn btn-info btn-outline-info" style="color: aliceblue" (click)="navigateBack()">Go Back</button>
+      <span><h2>TaskList task {{taskList.name}}</h2></span>
+    </div>
+    <br>
+    <table class="table">
+      <tr>
+        <td>#</td>
+        <td>Name</td>
+        <td>Status</td>
+        <td>Action</td>
+      </tr>
+      <tr *ngFor="let task of tasks">
+        <td>{{task.id}}</td>
+        <td>{{task.name}}</td>
+        <td>
+          <a class="text-dark">{{task.status}}</a>
+        </td>
+        <td>
+          <a routerLink="/tasks/{{task.id}}/">Details</a>
+        </td>
+      </tr>
+    </table>
+  </app-main>
+</ng-container>

@@ -1,0 +1,27 @@
+<app-main>
+  <ng-container>
+    <div class="container">
+      <div class="row">
+        <span><h2>TaskLists</h2></span>
+      </div>
+      <table class="table">
+        <tr>
+          <td>#</td>
+          <td>Name</td>
+          <td>Action</td>
+          <td>Action</td>
+        </tr>
+        <tr *ngFor="let taskList of taskLists">
+          <td>{{taskList.id}}</td>
+          <td>{{taskList.name}}</td>
+          <td>
+            <a routerLink="/tasklists/{{taskList.id}}/">Details</a>
+          </td>
+          <td>
+            <a routerLink="/tasklists/{{taskList.id}}/tasks">Tasks</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </ng-container>
+</app-main>
